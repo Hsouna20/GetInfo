@@ -17,7 +17,7 @@ services:
     ports:
       - "3041:3041"
     depends_on:
-      - mongoinfo
+      - mongo
     networks:
       - getinfo-network
 
@@ -25,7 +25,7 @@ services:
     image: mongo:4.4.6
     container_name: mongoinfo
     ports:
-      - "27017:27017"
+      - "27021:27017"
     volumes:
       - mongo-data-info:/data/db
     networks:
